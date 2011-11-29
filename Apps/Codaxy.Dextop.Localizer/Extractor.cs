@@ -13,6 +13,7 @@ namespace Codaxy.Dextop.Localizer
         public String ShortEntityName { get; set; } // e.g. SimpleWindow or common
         public String EntityNameForOverride { get; set; } // e.g. eBroker.window.SimpleWindow.prototype or Dextop.common
         public String FilePath { get; set; }
+        public bool IsDextopLocalize { get; set; }
     }
 
     public class LocalizableEntity

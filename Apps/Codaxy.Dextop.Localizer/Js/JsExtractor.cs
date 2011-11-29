@@ -26,6 +26,7 @@ namespace Codaxy.Dextop.Localizer.Js
         static Regex lineSimpleApply = CreateRegex(@"^Ext.apply\(\s*(?<name>({id}\.)?{idx})(\.prototype)?.*"); // e.g. Ext.apply(Dextop.common, {
         static Regex lineForLocalization = CreateRegex(@"^{indent},?(?<name>({id}Text)|title)\s*:\s*(?<value>.+)\s*$"); // e.g. localizationText: 'Text' or title: 'Title'
         static Regex lineExt4Class = CreateRegex(@"^Ext\.define\('(?<name>{id}\.{idx})',\s*{"); // e.g. Ext.define('Ext.ux.XY', { 
+        static Regex lineDextopLocalization = CreateRegex(@"^Dextop\.localize\('(?<name>{id}\.{idx})',\s*{"); // e.g. Dextop.localize('Ext.ux.XY', { 
 
         String GetShortObjectName(String objectName)
         {
@@ -44,8 +45,9 @@ namespace Codaxy.Dextop.Localizer.Js
                 return new ClasslikeEntity {
                     FilePath = filePath,
                     FullEntityName = cn,
-                    EntityNameForOverride = cn + ".prototype",
-                    ShortEntityName = GetShortObjectName(cn)
+                    EntityNameForOverride = cn,
+                    ShortEntityName = GetShortObjectName(cn),
+                    IsDextopLocalize = true
                 };
             }
 
@@ -57,12 +59,25 @@ namespace Codaxy.Dextop.Localizer.Js
                 {
                     FilePath = filePath,
                     FullEntityName = cn,
-                    EntityNameForOverride = cn + ".prototype",
-                    ShortEntityName = GetShortObjectName(cn)
+                    EntityNameForOverride = cn,
+                    ShortEntityName = GetShortObjectName(cn),
+                    IsDextopLocalize = true
                 };
             }
 
-
+            var m1_d = lineDextopLocalization.Match(line);
+            if (m1_d.Success)
+            {
+                var cn = m1_d.Result("${name}");
+                return new ClasslikeEntity
+                {
+                    FilePath = filePath,
+                    FullEntityName = cn,
+                    EntityNameForOverride = cn,
+                    ShortEntityName = GetShortObjectName(cn),
+                    IsDextopLocalize = true
+                };
+            }
 
             var m2 = lineSimpleApply.Match(line);
             if (m2.Success)

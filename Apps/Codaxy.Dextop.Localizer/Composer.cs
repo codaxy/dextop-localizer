@@ -8,6 +8,7 @@ namespace Codaxy.Dextop.Localizer
     public class LocalizedEntityBlock
     {
         public String EntityNameForOverride { get; set; }
+        public bool IsDextopLocalize { get; set; }
         public EntityLocalizationEntry[] LocalizationGridRows { get; set; }
     }
 

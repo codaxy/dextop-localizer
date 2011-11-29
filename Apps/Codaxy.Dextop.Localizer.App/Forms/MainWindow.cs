@@ -145,8 +145,15 @@ namespace Codaxy.Dextop.Localizer.Windows.Forms
 
             var blocks = (from c in list
                           where c.IsChecked
-                          group c by c.LocalizableProperty.EnclosingEntity.EntityNameForOverride into grp
-                          select new LocalizedEntityBlock { EntityNameForOverride = grp.Key, LocalizationGridRows = grp.ToArray() }
+                          group c by new { 
+                              EntityNameForOverride = c.LocalizableProperty.EnclosingEntity.EntityNameForOverride,
+                              IsDextopLocalize = c.LocalizableProperty.EnclosingEntity.IsDextopLocalize
+                          } into grp
+                          select new LocalizedEntityBlock { 
+                              EntityNameForOverride = grp.Key.EntityNameForOverride, 
+                              IsDextopLocalize = grp.Key.IsDextopLocalize,
+                              LocalizationGridRows = grp.ToArray() 
+                          }
                     ).ToArray();
 
 
@@ -646,6 +653,11 @@ namespace Codaxy.Dextop.Localizer.Windows.Forms
                     break;
                 }
             } while (true);
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

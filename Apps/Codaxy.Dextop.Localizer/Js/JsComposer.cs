@@ -20,7 +20,10 @@ namespace Codaxy.Dextop.Localizer.Js
             foreach (var block in blocks)
             {
                 bool firstLine = true;
-                output.AppendLine(String.Format("Ext.apply({0}, {{", block.EntityNameForOverride ));
+                if (block.IsDextopLocalize)
+                    output.AppendLine(String.Format("Dextop.localize('{0}', {{", block.EntityNameForOverride));
+                else
+                    output.AppendLine(String.Format("Ext.apply({0}, {{", block.EntityNameForOverride ));
                 foreach (var d in block.LocalizationGridRows)
                 {
                     var value = d.LocalizableProperty.IsQuoteEnclosed ? ("'" + d.Value + "'") : d.Value;
