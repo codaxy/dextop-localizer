@@ -150,6 +150,20 @@
   <metadata name="tTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="tbInputFiles.Text" xml:space="preserve">
+    <value># Use # to place comments
+# Use / suffix to denote folders
+# Use - prefix to denote files and folders to ignore
+
+# Example:
+
+# client/js/
+# client/cache/cm.js
+# -client/js/locale/
+
+test/js/
+-test/js/locale.js</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>31</value>
   </metadata>

@@ -659,5 +659,17 @@ namespace Codaxy.Dextop.Localizer.Windows.Forms
         {
             this.Close();
         }
+
+        private void btGoogle_Click(object sender, EventArgs e)
+        {
+            this.UseGoogle();
+        }
+
+        private void UseGoogle()
+        {
+            FrmGoogleTranslate googleTranslate = new FrmGoogleTranslate(dgvNew.DataSource as EntityLocalizationEntry[]);
+            googleTranslate.ShowDialog();
+            dgvNew.Refresh();
+        }
     }
 }
