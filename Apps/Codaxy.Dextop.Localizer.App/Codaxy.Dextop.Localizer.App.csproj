@@ -57,7 +57,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MSTranslitTools">
-      <HintPath>..\..\..\..\Users\Boris\Desktop\MSTranslitTools.DLL</HintPath>
+      <HintPath>.\MSTranslitTools.DLL</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -162,12 +162,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="WindowLogger.cs" />
-    <None Include="SerbianCyrillicToLatin.tms">
+    <Content Include="SerbianCyrillicToLatin.tms">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="SerbianLatinToCyrillic.tms">
+    </Content>
+    <Content Include="SerbianLatinToCyrillic.tms">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
     <None Include="Service References\TranslatorService\soap.wsdl" />
     <None Include="Service References\TranslatorService\soap.xsd">
       <SubType>Designer</SubType>
