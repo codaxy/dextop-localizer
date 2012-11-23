@@ -108,7 +108,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 497);
+            this.label2.Location = new System.Drawing.Point(12, 491);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 3;
@@ -118,7 +118,7 @@
             // 
             this.btRun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btRun.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btRun.Location = new System.Drawing.Point(915, 433);
+            this.btRun.Location = new System.Drawing.Point(901, 427);
             this.btRun.Name = "btRun";
             this.btRun.Size = new System.Drawing.Size(75, 56);
             this.btRun.TabIndex = 6;
@@ -128,20 +128,20 @@
             // 
             // lbStatus
             // 
-            this.lbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbStatus.FormattingEnabled = true;
-            this.lbStatus.Location = new System.Drawing.Point(12, 513);
+            this.lbStatus.Location = new System.Drawing.Point(12, 507);
             this.lbStatus.Name = "lbStatus";
             this.lbStatus.ScrollAlwaysVisible = true;
-            this.lbStatus.Size = new System.Drawing.Size(1067, 82);
+            this.lbStatus.Size = new System.Drawing.Size(1053, 82);
             this.lbStatus.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(274, 444);
+            this.label4.Location = new System.Drawing.Point(274, 438);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 13);
             this.label4.TabIndex = 10;
@@ -150,7 +150,7 @@
             // btChooseFolder
             // 
             this.btChooseFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btChooseFolder.Location = new System.Drawing.Point(736, 440);
+            this.btChooseFolder.Location = new System.Drawing.Point(736, 434);
             this.btChooseFolder.Name = "btChooseFolder";
             this.btChooseFolder.Size = new System.Drawing.Size(75, 23);
             this.btChooseFolder.TabIndex = 11;
@@ -162,7 +162,7 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(274, 472);
+            this.label5.Location = new System.Drawing.Point(274, 466);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 13);
             this.label5.TabIndex = 12;
@@ -171,7 +171,7 @@
             // btChooseReferenceFile
             // 
             this.btChooseReferenceFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btChooseReferenceFile.Location = new System.Drawing.Point(736, 469);
+            this.btChooseReferenceFile.Location = new System.Drawing.Point(736, 463);
             this.btChooseReferenceFile.Name = "btChooseReferenceFile";
             this.btChooseReferenceFile.Size = new System.Drawing.Size(75, 23);
             this.btChooseReferenceFile.TabIndex = 14;
@@ -191,7 +191,7 @@
             // btSave
             // 
             this.btSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btSave.Location = new System.Drawing.Point(1001, 433);
+            this.btSave.Location = new System.Drawing.Point(987, 427);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(75, 23);
             this.btSave.TabIndex = 20;
@@ -203,7 +203,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(912, 67);
+            this.label3.Location = new System.Drawing.Point(898, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(164, 13);
             this.label3.TabIndex = 23;
@@ -211,9 +211,9 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.Location = new System.Drawing.Point(265, 83);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -224,8 +224,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(811, 345);
-            this.splitContainer1.SplitterDistance = 351;
+            this.splitContainer1.Size = new System.Drawing.Size(797, 339);
+            this.splitContainer1.SplitterDistance = 344;
             this.splitContainer1.TabIndex = 24;
             // 
             // dgvCurrent
@@ -247,9 +247,10 @@
             this.dgvCurrent.RowHeadersVisible = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dgvCurrent.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvCurrent.Size = new System.Drawing.Size(351, 345);
+            this.dgvCurrent.Size = new System.Drawing.Size(344, 339);
             this.dgvCurrent.TabIndex = 23;
             this.dgvCurrent.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellEnter);
+            this.dgvCurrent.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellValueChanged);
             // 
             // dataGridViewCheckBoxColumn2
             // 
@@ -353,8 +354,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dgvDeleted);
-            this.splitContainer2.Size = new System.Drawing.Size(456, 345);
-            this.splitContainer2.SplitterDistance = 162;
+            this.splitContainer2.Size = new System.Drawing.Size(449, 339);
+            this.splitContainer2.SplitterDistance = 158;
             this.splitContainer2.TabIndex = 0;
             // 
             // dgvNew
@@ -376,9 +377,9 @@
             this.dgvNew.RowHeadersVisible = false;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dgvNew.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvNew.Size = new System.Drawing.Size(456, 162);
+            this.dgvNew.Size = new System.Drawing.Size(449, 158);
             this.dgvNew.TabIndex = 21;
-            this.dgvNew.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellEnter);
+            this.dgvNew.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellValueChanged);
             // 
             // cmAdd
             // 
@@ -426,9 +427,10 @@
             this.dgvDeleted.RowHeadersVisible = false;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.dgvDeleted.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvDeleted.Size = new System.Drawing.Size(456, 179);
+            this.dgvDeleted.Size = new System.Drawing.Size(449, 177);
             this.dgvDeleted.TabIndex = 24;
             this.dgvDeleted.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellEnter);
+            this.dgvDeleted.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellValueChanged);
             // 
             // dataGridViewCheckBoxColumn1
             // 
@@ -465,20 +467,20 @@
             this.cbLocalizerType.Items.AddRange(new object[] {
             "JavaScript",
             "XML"});
-            this.cbLocalizerType.Location = new System.Drawing.Point(128, 440);
+            this.cbLocalizerType.Location = new System.Drawing.Point(128, 434);
             this.cbLocalizerType.Name = "cbLocalizerType";
             this.cbLocalizerType.Size = new System.Drawing.Size(126, 21);
             this.cbLocalizerType.TabIndex = 25;
             // 
             // tbOriginalText
             // 
-            this.tbOriginalText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbOriginalText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbOriginalText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbOriginalText.Location = new System.Drawing.Point(266, 25);
             this.tbOriginalText.Name = "tbOriginalText";
             this.tbOriginalText.ReadOnly = true;
-            this.tbOriginalText.Size = new System.Drawing.Size(811, 22);
+            this.tbOriginalText.Size = new System.Drawing.Size(797, 22);
             this.tbOriginalText.TabIndex = 26;
             // 
             // label7
@@ -494,7 +496,7 @@
             // tbReferenceFile
             // 
             this.tbReferenceFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.tbReferenceFile.Location = new System.Drawing.Point(340, 469);
+            this.tbReferenceFile.Location = new System.Drawing.Point(340, 463);
             this.tbReferenceFile.Name = "tbReferenceFile";
             this.tbReferenceFile.Size = new System.Drawing.Size(390, 20);
             this.tbReferenceFile.TabIndex = 13;
@@ -504,7 +506,7 @@
             // tbRootFolder
             // 
             this.tbRootFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.tbRootFolder.Location = new System.Drawing.Point(340, 441);
+            this.tbRootFolder.Location = new System.Drawing.Point(340, 435);
             this.tbRootFolder.Name = "tbRootFolder";
             this.tbRootFolder.Size = new System.Drawing.Size(390, 20);
             this.tbRootFolder.TabIndex = 9;
@@ -513,24 +515,24 @@
             // 
             // tbInputFiles
             // 
-            this.tbInputFiles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.tbInputFiles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.tbInputFiles.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbInputFiles.Location = new System.Drawing.Point(12, 25);
             this.tbInputFiles.Multiline = true;
             this.tbInputFiles.Name = "tbInputFiles";
             this.tbInputFiles.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbInputFiles.Size = new System.Drawing.Size(245, 403);
+            this.tbInputFiles.Size = new System.Drawing.Size(245, 397);
             this.tbInputFiles.TabIndex = 0;
             this.tbInputFiles.Text = resources.GetString("tbInputFiles.Text");
             this.tTip.SetToolTip(this.tbInputFiles, "Use # to place comments\r\nUse / suffix to denote folders\r\nUse - prefix to denote f" +
-                    "iles and folders to ignore\r\n\r\nExample:\r\n\r\nclient/js/\r\nclient/cache/cm.js\r\n-clien" +
-                    "t/js/locale/\r\n\r\nforms.js\r\n");
+        "iles and folders to ignore\r\n\r\nExample:\r\n\r\nclient/js/\r\nclient/cache/cm.js\r\n-clien" +
+        "t/js/locale/\r\n\r\nforms.js\r\n");
             // 
             // btSimpleSelect
             // 
             this.btSimpleSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btSimpleSelect.Location = new System.Drawing.Point(12, 439);
+            this.btSimpleSelect.Location = new System.Drawing.Point(12, 433);
             this.btSimpleSelect.Name = "btSimpleSelect";
             this.btSimpleSelect.Size = new System.Drawing.Size(110, 23);
             this.btSimpleSelect.TabIndex = 31;
@@ -541,7 +543,7 @@
             // btClearStatus
             // 
             this.btClearStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btClearStatus.Location = new System.Drawing.Point(980, 498);
+            this.btClearStatus.Location = new System.Drawing.Point(966, 492);
             this.btClearStatus.Name = "btClearStatus";
             this.btClearStatus.Size = new System.Drawing.Size(10, 10);
             this.btClearStatus.TabIndex = 32;
@@ -553,7 +555,7 @@
             // btLoadProfile
             // 
             this.btLoadProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btLoadProfile.Location = new System.Drawing.Point(12, 469);
+            this.btLoadProfile.Location = new System.Drawing.Point(12, 463);
             this.btLoadProfile.Name = "btLoadProfile";
             this.btLoadProfile.Size = new System.Drawing.Size(75, 23);
             this.btLoadProfile.TabIndex = 33;
@@ -564,7 +566,7 @@
             // btSaveProfile
             // 
             this.btSaveProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btSaveProfile.Location = new System.Drawing.Point(93, 469);
+            this.btSaveProfile.Location = new System.Drawing.Point(93, 463);
             this.btSaveProfile.Name = "btSaveProfile";
             this.btSaveProfile.Size = new System.Drawing.Size(75, 23);
             this.btSaveProfile.TabIndex = 34;
@@ -575,7 +577,7 @@
             // btSaveAs
             // 
             this.btSaveAs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btSaveAs.Location = new System.Drawing.Point(174, 469);
+            this.btSaveAs.Location = new System.Drawing.Point(174, 463);
             this.btSaveAs.Name = "btSaveAs";
             this.btSaveAs.Size = new System.Drawing.Size(80, 23);
             this.btSaveAs.TabIndex = 35;
@@ -593,7 +595,7 @@
             // btEnvironment
             // 
             this.btEnvironment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btEnvironment.Location = new System.Drawing.Point(817, 469);
+            this.btEnvironment.Location = new System.Drawing.Point(817, 463);
             this.btEnvironment.Name = "btEnvironment";
             this.btEnvironment.Size = new System.Drawing.Size(75, 23);
             this.btEnvironment.TabIndex = 36;
@@ -604,7 +606,7 @@
             // btClose
             // 
             this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btClose.Location = new System.Drawing.Point(1001, 458);
+            this.btClose.Location = new System.Drawing.Point(987, 452);
             this.btClose.Name = "btClose";
             this.btClose.Size = new System.Drawing.Size(75, 23);
             this.btClose.TabIndex = 37;
@@ -615,7 +617,7 @@
             // btGoogle
             // 
             this.btGoogle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btGoogle.Location = new System.Drawing.Point(1001, 487);
+            this.btGoogle.Location = new System.Drawing.Point(987, 481);
             this.btGoogle.Name = "btGoogle";
             this.btGoogle.Size = new System.Drawing.Size(75, 23);
             this.btGoogle.TabIndex = 38;
@@ -627,7 +629,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 604);
+            this.ClientSize = new System.Drawing.Size(1077, 598);
             this.Controls.Add(this.btGoogle);
             this.Controls.Add(this.btEnvironment);
             this.Controls.Add(this.btClose);
@@ -655,6 +657,7 @@
             this.Controls.Add(this.btRun);
             this.Controls.Add(this.tbInputFiles);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1093, 636);
             this.Name = "MainWindow";
             this.Text = "Dextop Localizer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);

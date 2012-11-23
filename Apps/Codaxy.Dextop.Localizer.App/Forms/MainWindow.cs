@@ -126,9 +126,9 @@ namespace Codaxy.Dextop.Localizer.Windows.Forms
                 Dictionary<String, LocalizableEntity> map3 = new Dictionary<string, LocalizableEntity>();
                 Diff(map1, map2, map3);
 
-                dgvNew.DataSource = GetLocalizationGridDataSource(map1, true);
+                dgvNew.DataSource = GetLocalizationGridDataSource(map1, false);
                 dgvCurrent.DataSource = GetLocalizationGridDataSource(map2, true);
-                dgvDeleted.DataSource = GetLocalizationGridDataSource(map3, true);
+                dgvDeleted.DataSource = GetLocalizationGridDataSource(map3, false);
             }
             catch (Exception ex)
             {
@@ -670,6 +670,14 @@ namespace Codaxy.Dextop.Localizer.Windows.Forms
             FrmGoogleTranslate googleTranslate = new FrmGoogleTranslate(dgvNew.DataSource as EntityLocalizationEntry[]);
             googleTranslate.ShowDialog();
             dgvNew.Refresh();
+        }
+
+        private void dgv_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            var dgv = (DataGridView)sender;
+
+            if (e.RowIndex >= 0 && e.ColumnIndex > 0)
+                dgv.Rows[e.RowIndex].Cells[0].Value = true;
         }
     }
 }
