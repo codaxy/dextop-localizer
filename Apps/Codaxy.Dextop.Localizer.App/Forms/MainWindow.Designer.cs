@@ -379,6 +379,7 @@
             this.dgvNew.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvNew.Size = new System.Drawing.Size(449, 158);
             this.dgvNew.TabIndex = 21;
+            this.dgvNew.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellEnter);
             this.dgvNew.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellValueChanged);
             // 
             // cmAdd
