@@ -468,7 +468,7 @@
             this.cbLocalizerType.Items.AddRange(new object[] {
             "JavaScript",
             "XML"});
-            this.cbLocalizerType.Location = new System.Drawing.Point(128, 434);
+            this.cbLocalizerType.Location = new System.Drawing.Point(128, 435);
             this.cbLocalizerType.Name = "cbLocalizerType";
             this.cbLocalizerType.Size = new System.Drawing.Size(126, 21);
             this.cbLocalizerType.TabIndex = 25;
@@ -533,7 +533,7 @@
             // btSimpleSelect
             // 
             this.btSimpleSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btSimpleSelect.Location = new System.Drawing.Point(12, 433);
+            this.btSimpleSelect.Location = new System.Drawing.Point(12, 434);
             this.btSimpleSelect.Name = "btSimpleSelect";
             this.btSimpleSelect.Size = new System.Drawing.Size(110, 23);
             this.btSimpleSelect.TabIndex = 31;

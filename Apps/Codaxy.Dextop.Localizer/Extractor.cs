@@ -28,18 +28,6 @@ namespace Codaxy.Dextop.Localizer
 
     public abstract class EntityExtractor
     {
-        public static EntityExtractor GetExtractor(LocalizerType type, ILogger log) {
-            switch (type)
-            {
-                case LocalizerType.JavaScript:
-                    return new Js.JsExtractor { Logger = log };
-                case LocalizerType.Xml:
-                    return new Xml.XmlExtractor() { Logger = log };
-                default:
-                    throw new NotImplementedException();
-            }
-        }
-
         public ILogger Logger { get; set; }
 
         void Log(String format, params object[] v)

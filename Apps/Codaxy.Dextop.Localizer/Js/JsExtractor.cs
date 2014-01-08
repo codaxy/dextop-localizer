@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Codaxy.Dextop.Localizer.Js
+namespace Codaxy.Dextop.Localizer
 {
     public class JsExtractor : EntityExtractor
     {
@@ -27,6 +27,7 @@ namespace Codaxy.Dextop.Localizer.Js
         static Regex lineForLocalization = CreateRegex(@"^{indent},?(?<name>({id}Text)|title)\s*:\s*(?<value>.+)\s*$"); // e.g. localizationText: 'Text' or title: 'Title'
         static Regex lineExt4Class = CreateRegex(@"^Ext\.define\('(?<name>{id}\.{idx})',\s*{"); // e.g. Ext.define('Ext.ux.XY', { 
         static Regex lineDextopLocalization = CreateRegex(@"^Dextop\.localize\('(?<name>{id}\.{idx})',\s*{"); // e.g. Dextop.localize('Ext.ux.XY', { 
+        static Regex lineForLocalizationSimple = CreateRegex(@"^{indent}*,?(?<name>{id})\s*:\s*(?<value>.+)\s*,?$"); // e.g. localizationText: 'Text' or title: 'Title'
 
         String GetShortObjectName(String objectName)
         {
@@ -37,7 +38,7 @@ namespace Codaxy.Dextop.Localizer.Js
                 return objectName.Substring(objectName.Substring(0, l).LastIndexOf('.') + 1);
         }
 
-        ClasslikeEntity ProcessExtendLine(String filePath, String line) {
+        ClasslikeEntity ProcessEntityDefinitionLine(String filePath, String line) {
             var m1 = lineExtendClass.Match(line);
             if (m1.Success)
             {
@@ -125,7 +126,10 @@ namespace Codaxy.Dextop.Localizer.Js
 
         LocalizableEntity ProcessPropertyLine(ClasslikeEntity jsObject, String line)
         {
-            var m1 = lineForLocalization.Match(line);
+            Match m1;
+
+            m1 = lineForLocalization.Match(line);
+
             if (m1.Success)
             {
                 var name = m1.Result("${name}");
@@ -157,7 +161,7 @@ namespace Codaxy.Dextop.Localizer.Js
                 while (reader.Peek() > 0)
                 {
                     String line = reader.ReadLine();
-                    ClasslikeEntity o = ProcessExtendLine(filePath, line);
+                    ClasslikeEntity o = ProcessEntityDefinitionLine(filePath, line);
                     if (o != null)
                         jsObject = o;
 
