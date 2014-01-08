@@ -109,7 +109,9 @@ namespace Codaxy.Dextop.Localizer.Windows.Forms
 
             try
             {
-                EntityExtractor ext = EntityExtractor.GetExtractor(LocalizerType, WindowLogger);
+                EntityExtractor ext = LocalizationModule.Create(LocalizerType).Extractor;
+                ext.Logger = WindowLogger;
+
                 Dictionary<String, LocalizableEntity> map1 = new Dictionary<string, LocalizableEntity>();
                 ext.ProcessFileList(includes.ToArray(), excludes.ToArray(), RootPathResolved, FileExtension, map1);
 
@@ -157,7 +159,7 @@ namespace Codaxy.Dextop.Localizer.Windows.Forms
                     ).ToArray();
 
 
-            var com = Composer.CreateComposer(LocalizerType);
+            var com = LocalizationModule.Create(LocalizerType).Composer;
             return com.GenerateOutputFile(blocks);
         }
 
@@ -382,25 +384,13 @@ namespace Codaxy.Dextop.Localizer.Windows.Forms
                 switch (LocalizerType)
                 {
                     case LocalizerType.JavaScript:
+                    case LocalizerType.JavaScript2:
                         return "*.js";
                     case LocalizerType.Xml:
                         return "*.xml";
-                    default:
-                        throw new NotImplementedException();
-                }
-            }
-        }
+                    case LocalizerType.Resx:
+                        return "*.resx";
 
-        private String LocalizerTypeCode
-        {
-            get
-            {
-                switch (LocalizerType)
-                {
-                    case LocalizerType.JavaScript:
-                        return "Js";
-                    case LocalizerType.Xml:
-                        return "Xml";
                     default:
                         throw new NotImplementedException();
                 }

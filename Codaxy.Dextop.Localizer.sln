@@ -1,11 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codaxy.Dextop.Localizer.App", "Apps\Codaxy.Dextop.Localizer.App\Codaxy.Dextop.Localizer.App.csproj", "{2A641CD1-774C-4D13-98F7-4E7713A1FB61}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codaxy.Dextop.Localizer", "Apps\Codaxy.Dextop.Localizer\Codaxy.Dextop.Localizer.csproj", "{C9095CDC-D710-4B78-A3F4-6B81B142AB17}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Codaxy.Dextop.Localizer.Setup", "Apps\Codaxy.Dextop.Localizer.Setup\Codaxy.Dextop.Localizer.Setup.vdproj", "{4EC838D8-93D1-4D58-A590-E81E157F6773}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +19,6 @@ Global
 		{C9095CDC-D710-4B78-A3F4-6B81B142AB17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9095CDC-D710-4B78-A3F4-6B81B142AB17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9095CDC-D710-4B78-A3F4-6B81B142AB17}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4EC838D8-93D1-4D58-A590-E81E157F6773}.Debug|Any CPU.ActiveCfg = Debug
-		{4EC838D8-93D1-4D58-A590-E81E157F6773}.Debug|Any CPU.Build.0 = Debug
-		{4EC838D8-93D1-4D58-A590-E81E157F6773}.Release|Any CPU.ActiveCfg = Release
-		{4EC838D8-93D1-4D58-A590-E81E157F6773}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

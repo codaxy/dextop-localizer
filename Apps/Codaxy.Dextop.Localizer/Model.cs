@@ -9,7 +9,9 @@ namespace Codaxy.Dextop.Localizer
 {
     public enum LocalizerType { 
         JavaScript = 0, 
-        Xml = 1 
+        Xml = 1,
+        JavaScript2 = 2,
+        Resx = 3
     };
 
     public class LocalizationProfile

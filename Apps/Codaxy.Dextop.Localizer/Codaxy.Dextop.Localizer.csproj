@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,10 +31,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -41,12 +44,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Composer.cs" />
+    <Compile Include="Resx\ResxComposer.cs" />
+    <Compile Include="Resx\ResxExtractor.cs" />
+    <Compile Include="Resx\ResxLocalizationModule.cs" />
+    <Compile Include="Js2\Js2Composer.cs" />
+    <Compile Include="Js2\Js2Extractor.cs" />
     <Compile Include="Extractor.cs" />
     <Compile Include="ILogger.cs" />
+    <Compile Include="Js2\Js2LocalizationModule.cs" />
     <Compile Include="Js\JsComposer.cs" />
     <Compile Include="Js\JsExtractor.cs" />
+    <Compile Include="LocalizationModule.cs" />
+    <Compile Include="Js\JsLocalizationModule.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Xml\XmlLocalizationModule.cs" />
     <Compile Include="Xml\XmlComposer.cs" />
     <Compile Include="Xml\XmlExtractor.cs" />
   </ItemGroup>
