@@ -60,7 +60,8 @@ namespace Codaxy.Dextop.Localizer
             {
                 var name = m1.Result("${name}");
                 var value = m1.Result("${value}").TrimEnd(',', ';', ' ', '\t', '\r', '\n');
-                bool quotes = (value.StartsWith("'") && value.EndsWith("'")) || (value.StartsWith("\"") && value.EndsWith("\""));
+                bool quotes = (value.StartsWith("'") && value.EndsWith("'"));
+                bool dquotes = (value.StartsWith("\"") && value.EndsWith("\""));
                 return new LocalizableEntity
                 {
                     EnclosingEntity = jsObject,
@@ -68,7 +69,8 @@ namespace Codaxy.Dextop.Localizer
                     ShallowEntityPath = jsObject.ShortEntityName + "." + name,
                     FullEntityPath = jsObject.EntityNameForOverride + "." + name,
                     IsQuoteEnclosed = quotes,
-                    Value = quotes ? value.TrimStart('"', '\'').TrimEnd('"', '\'') : value
+                    Value = quotes ? value.TrimStart('\'').TrimEnd('\'') : 
+                            (dquotes ? value.TrimStart('"').TrimEnd('"') : value)
                 };
             }
 
