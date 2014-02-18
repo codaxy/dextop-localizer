@@ -495,7 +495,7 @@ namespace Codaxy.Dextop.Localizer.Windows.Forms
         private void btEnvironment_Click(object sender, EventArgs e)
         {
             FrmEnvironment frm = new FrmEnvironment { Environment = EnvironmentVariables };
-            if (frm.ShowDialog() == System.Windows.Forms.DialogResult.OK);
+            if (frm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 DoSaveEnvironment();
         }
 
