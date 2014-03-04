@@ -12,14 +12,15 @@ namespace Codaxy.Dextop.Localizer
     {
         public override string GenerateOutputFile(LocalizedEntityBlock[] blocks)
         {
-            StringBuilder sb = new StringBuilder();
-            var stream = new MemoryStream();
-            using (var writer = new ResXResourceWriter(stream))
-            foreach (var block in blocks)
-                foreach (var r in block.LocalizationGridRows)
-                    writer.AddResource(r.LocalizableProperty.EntityName, r.Value);
+            var ms = new MemoryStream();
 
-            return Encoding.UTF8.GetString(stream.ToArray());
+            using (var resxw = new ResXResourceWriter(ms))
+                foreach (var block in blocks)
+                    foreach (var r in block.LocalizationGridRows)
+                        resxw.AddResource(r.LocalizableProperty.EntityName, r.Value);
+
+            var array = ms.ToArray();
+            return Encoding.UTF8.GetString(array, 3, array.Length - 3);
         }
     }
 }
