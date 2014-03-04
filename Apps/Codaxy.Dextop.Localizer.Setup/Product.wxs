@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="Dextop Localizer" Language="1033" Version="1.1.0.0" Manufacturer="Codaxy LLC" UpgradeCode="bff80345-9b47-47e0-8274-06d40a27aba8">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes"/>
+
+		<Feature Id="ProductFeature" Title="Dextop Localizer Setup" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="Codaxy">
+          <Directory Id="APPLICATIONFOLDER" Name="Dextop Localizer" />
+        </Directory>
+			</Directory>
+		</Directory>
+	</Fragment>
+  
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="APPLICATIONFOLDER">
+      <Component Guid="{917CC5AC-B596-4A18-ADDA-DFDF188F870A}">
+        <File Id="Codaxy.Dextop.Localizer.Windows.exe" Source="$(var.Codaxy.Dextop.Localizer.App.TargetPath)" KeyPath="yes" />
+
+        <ProgId Id="Codaxy.Dextop.Localizer.Windows.lcp" Description="Dextop Localizer localization configuration profile file">
+          <Extension Id="lcp" ContentType="application/text">
+            <Verb Id="open" Command="Open" TargetFile="Codaxy.Dextop.Localizer.Windows.exe" Argument='"%1"' />
+          </Extension>
+        </ProgId>
+      </Component>
+      
+      <Component Guid="{B1CD08F9-7104-47C9-A8FD-D6328DC97370}">
+        <File Source="$(var.Codaxy.Dextop.Localizer.TargetPath)" KeyPath="yes" />
+      </Component>
+      
+      <Component Guid="{D192B9D8-A3E1-41EF-BAC8-39E373A48292}">
+        <File Source="..\Codaxy.Dextop.Localizer.App\bin\Debug\Codaxy.Dextop.Localizer.Windows.exe.config" KeyPath="yes" />
+      </Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>
