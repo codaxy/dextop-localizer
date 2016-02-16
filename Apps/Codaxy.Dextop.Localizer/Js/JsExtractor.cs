@@ -24,7 +24,7 @@ namespace Codaxy.Dextop.Localizer
         static Regex lineNewInstance = CreateRegex(@"^(?<name>{id}\.{idx})\s*=\s*new"); // e.g. eBroker.App = new Ext.app.App({
         static Regex linePlainObject = CreateRegex(@"^(?<name>{id}\.{idx})\s*=\s*{"); // e.g. eBroker.App = {
         static Regex lineSimpleApply = CreateRegex(@"^Ext.apply\(\s*(?<name>({id}\.)?{idx})(\.prototype)?.*"); // e.g. Ext.apply(Dextop.common, {
-        static Regex lineForLocalization = CreateRegex(@"^{indent},?(?<name>({id}Text)|title)\s*:\s*(?<value>.+)\s*$"); // e.g. localizationText: 'Text' or title: 'Title'
+        static Regex lineForLocalization = CreateRegex(@"^{indent},?(?<name>({id}Text)|title)\s*:\s*(?<value>('.*)|" + "(\".*).+)" + "\\s*$"); // e.g. localizationText: 'Text' or title: 'Title'
         static Regex lineExt4Class = CreateRegex(@"^Ext\.define\('(?<name>{id}\.{idx})',\s*{"); // e.g. Ext.define('Ext.ux.XY', { 
         static Regex lineDextopLocalization = CreateRegex(@"^Dextop\.localize\('(?<name>{id}\.{idx})',\s*{"); // e.g. Dextop.localize('Ext.ux.XY', { 
         static Regex lineForLocalizationSimple = CreateRegex(@"^{indent}*,?(?<name>{id})\s*:\s*(?<value>.+)\s*,?$"); // e.g. localizationText: 'Text' or title: 'Title'
