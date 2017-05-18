@@ -37,6 +37,7 @@ namespace Codaxy.Dextop.Localizer
         {
             Logger.LogFormat("Processing file {0}", filePath);
             XmlTextReader xr = new XmlTextReader(filePath);
+            string propertyPath = string.Empty;
             try
             {
                 if (xr.ReadToDescendant("localization"))
@@ -55,7 +56,8 @@ namespace Codaxy.Dextop.Localizer
                                                 String fieldName = xr.GetAttribute("name");
                                                 String fieldValue = xr.ReadElementContentAsString();
                                                 LocalizableEntity property = GetLocalizableProperty(filePath, className, fieldName, fieldValue);
-                                                map.Add(property.FullEntityPath, property);
+                                                propertyPath = property.FullEntityPath;
+                                                map.Add(propertyPath, property);
                                             }
                                             break;
                                     }
@@ -65,7 +67,7 @@ namespace Codaxy.Dextop.Localizer
             catch (Exception ex)
             {
                 Logger.LogFormat("Error ({0})", filePath);
-                throw ex;
+                throw new ExtractorException("Error: '{0}'. Property path: '{1}'", ex.Message, propertyPath);
             }
             finally
             {

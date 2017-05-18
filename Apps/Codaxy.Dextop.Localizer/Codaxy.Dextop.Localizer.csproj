@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Composer.cs" />
+    <Compile Include="ExtractorException.cs" />
     <Compile Include="Resx\ResxComposer.cs" />
     <Compile Include="Resx\ResxExtractor.cs" />
     <Compile Include="Resx\ResxLocalizationModule.cs" />
