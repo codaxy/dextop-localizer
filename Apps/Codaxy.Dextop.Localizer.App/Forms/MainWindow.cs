@@ -106,7 +106,6 @@ namespace Codaxy.Dextop.Localizer.Windows.Forms
                 else if (!fileName.StartsWith("#"))
                     includes.Add(fileName);
             }
-
             try
             {
                 EntityExtractor ext = LocalizationModule.Create(LocalizerType).Extractor;
@@ -115,18 +114,26 @@ namespace Codaxy.Dextop.Localizer.Windows.Forms
                 Dictionary<String, LocalizableEntity> map1 = new Dictionary<string, LocalizableEntity>();
                 ext.ProcessFileList(includes.ToArray(), excludes.ToArray(), RootPathResolved, FileExtension, map1);
 
+                map1 = map1.OrderBy(a => a.Value.ShallowEntityPath).ToDictionary(a => a.Key, a => a.Value);
+
                 Dictionary<String, LocalizableEntity> map2 = new Dictionary<string, LocalizableEntity>();
                 try
                 {
                     ext.ProcessFile(ReferenceResolved, map2);
+                    
                 }
                 catch (Exception ex)
                 {
                     WindowLogger.LogFormat("Warning: error parsing reference input ({0})", ex.Message);
                 }
 
+                map2 = map2.OrderBy(a => a.Value.ShallowEntityPath).ToDictionary(a => a.Key, a => a.Value);
+
                 Dictionary<String, LocalizableEntity> map3 = new Dictionary<string, LocalizableEntity>();
+
                 Diff(map1, map2, map3);
+
+                map3 = map3.OrderBy(a => a.Value.ShallowEntityPath).ToDictionary(a => a.Key, a => a.Value);
 
                 dgvNew.DataSource = GetLocalizationGridDataSource(map1, false);
                 dgvCurrent.DataSource = GetLocalizationGridDataSource(map2, true);
