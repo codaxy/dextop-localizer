@@ -106,7 +106,6 @@ namespace Codaxy.Dextop.Localizer.Windows.Forms
                 else if (!fileName.StartsWith("#"))
                     includes.Add(fileName);
             }
-
             try
             {
                 EntityExtractor ext = LocalizationModule.Create(LocalizerType).Extractor;
@@ -114,36 +113,31 @@ namespace Codaxy.Dextop.Localizer.Windows.Forms
 
                 Dictionary<String, LocalizableEntity> map1 = new Dictionary<string, LocalizableEntity>();
                 ext.ProcessFileList(includes.ToArray(), excludes.ToArray(), RootPathResolved, FileExtension, map1);
-                var map1Sorted = (from entry in map1
-                                 orderby entry.Value.ShallowEntityPath ascending
-                                 select entry)
-                                 .ToDictionary(entry => entry.Key, entry => entry.Value);
+
+                map1 = map1.OrderBy(a => a.Value.ShallowEntityPath).ToDictionary(a => a.Key, a => a.Value);
 
                 Dictionary<String, LocalizableEntity> map2 = new Dictionary<string, LocalizableEntity>();
                 try
                 {
                     ext.ProcessFile(ReferenceResolved, map2);
-
+                    
                 }
                 catch (Exception ex)
                 {
                     WindowLogger.LogFormat("Warning: error parsing reference input ({0})", ex.Message);
                 }
-                var map2Sorted = (from entry in map2
-                                  orderby entry.Value.ShallowEntityPath ascending
-                                  select entry)
-                                     .ToDictionary(entry => entry.Key, entry => entry.Value);
+
+                map2 = map2.OrderBy(a => a.Value.ShallowEntityPath).ToDictionary(a => a.Key, a => a.Value);
 
                 Dictionary<String, LocalizableEntity> map3 = new Dictionary<string, LocalizableEntity>();
-                Diff(map1, map2, map3);
-                var map3Sorted = (from entry in map3
-                                  orderby entry.Value.ShallowEntityPath ascending
-                                  select entry)
-                                     .ToDictionary(entry => entry.Key, entry => entry.Value);
 
-                dgvNew.DataSource = GetLocalizationGridDataSource(map1Sorted, false);
-                dgvCurrent.DataSource = GetLocalizationGridDataSource(map2Sorted, true);
-                dgvDeleted.DataSource = GetLocalizationGridDataSource(map3Sorted, false);
+                Diff(map1, map2, map3);
+
+                map3 = map3.OrderBy(a => a.Value.ShallowEntityPath).ToDictionary(a => a.Key, a => a.Value);
+
+                dgvNew.DataSource = GetLocalizationGridDataSource(map1, false);
+                dgvCurrent.DataSource = GetLocalizationGridDataSource(map2, true);
+                dgvDeleted.DataSource = GetLocalizationGridDataSource(map3, false);
             }
             catch (Exception ex)
             {
